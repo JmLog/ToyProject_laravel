@@ -17,7 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('jm', function () {
+Route::get('/ping', function () {
+    return '200';
+});
+
+Route::get('/jm', function () {
     try {
         $dd = \Illuminate\Support\Facades\DB::table('jm')->get();
         dd($dd);

@@ -20,3 +20,4 @@ yarn-error.log
 /public/js/modules.js
 /laradock
 /csm_build
+/storage

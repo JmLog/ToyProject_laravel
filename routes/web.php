@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/jm', function () {
+   $dd = \Illuminate\Support\Facades\DB::table('jm')->get();
+   dd($dd);
+});
+

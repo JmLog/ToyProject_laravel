@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('jm', function () {
-   $dd = \Illuminate\Support\Facades\DB::table('jm')->get();
-   dd($dd);
+    try {
+        $dd = \Illuminate\Support\Facades\DB::table('jm')->get();
+        dd($dd);
+    } catch (Exception $exception) {
+        dd($exception->getMessage());
+    }
 });
 
